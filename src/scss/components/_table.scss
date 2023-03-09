@@ -108,13 +108,13 @@
 
             &-text {
                 font-size: $text-size-p;
-                font-size: $text-height-p;
+                line-height: $text-height-p;
                 font-weight: 400;
+                color: $text-primary;
 
                 @media (min-width: 768px) {
                     font-size: $text-size-p;
                     line-height: $text-height-p;
-                    color: $text-primary;
                     letter-spacing: .2px;
                 }
             }
