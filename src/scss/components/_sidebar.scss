@@ -6,6 +6,10 @@
     z-index: 1000;
     background: $bgModal;
 
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+        16px 0px 52px rgba(14, 24, 80, 0.2);
+
+
     &__layout {
         position: fixed;
         display: flex;
@@ -22,11 +26,6 @@
 
     }
 
-    @media(min-width: 768px) {
-
-        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-
-    }
 
     @media (min-width: 1120px) {
         box-shadow: none;

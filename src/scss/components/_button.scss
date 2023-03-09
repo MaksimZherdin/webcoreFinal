@@ -6,7 +6,17 @@
     border-radius: 16px;
     padding: 4px 16px;
     padding-right: 5px;
+    cursor: pointer;
+    transition: .3s ease;
 
+    &:hover .button-modal-text {
+        color: $button;
+    }
+
+    &:hover {
+        background: $bgModal;
+        box-shadow: inset 0px 0px 1px 1px $button;
+    }
 
     &__text {
         font-weight: bold;
@@ -19,9 +29,25 @@
         text-transform: uppercase;
         background: transparent;
         color: $text-white;
+        transition: .3s ease;
     }
 
     &__icon {
         background: transparent;
+        margin-left: 5px;
+    }
+}
+
+.button-order-icon {
+    padding: 0px 8px;
+    background: transparent;
+}
+
+.icon-go {
+    cursor: pointer;
+    transition: .2s ease;
+
+    &:hover {
+        transform: scale(1.1);
     }
 }

@@ -9,6 +9,7 @@
 @import './components/repair.scss';
 @import './components/swiper.scss';
 @import './components/table.scss';
+@import './components/footer.scss';
 
 
 
@@ -19,10 +20,10 @@
   text-decoration: none;
   list-style-type: none;
   background: transparent;
+  font-family: 'TT Lakes', sans-serif;
 }
 
 body {
-  font-family: 'TT Lakes', sans-serif;
   background-color: $bgMain;
   color: $text-primary;
 }

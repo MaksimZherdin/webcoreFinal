@@ -1,0 +1,224 @@
+.section-repair-services-table--display--none {
+    display: none;
+}
+
+.table {
+    display: table;
+    flex-direction: row;
+    overflow-x: auto;
+    border-collapse: collapse;
+    width: 100%;
+
+    &__layout {
+        padding: 24px;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        padding-bottom: 50px;
+        gap: 16px;
+
+        &-text {
+            font-size: $text-size-p;
+            line-height: $text-height-p;
+            letter-spacing: .2px;
+            color: $text-primary;
+            font-weight: 400;
+            max-width: 421px;
+        }
+
+        &-button {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &-text {
+                font-weight: bold;
+                letter-spacing: -0.2px;
+                font-size: $text-size-services;
+                line-height: $text-height-services;
+                color: $text-primary;
+            }
+
+            &-icon {
+                margin-left: 9px;
+            }
+
+            @media(min-width: 320px) and (max-width: 767px) {
+                text-align: left;
+                display: block;
+            }
+
+        }
+    }
+
+    &__card {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        padding: 16px;
+        margin-left: 8px;
+        gap: 16px;
+        width: 85%;
+        flex-shrink: 0;
+        max-width: 300px;
+        border-radius: 6px;
+        background: $bgModal;
+
+        @media (min-width: 768px) {
+            &:first-of-type {
+                display: table-header-group;
+            }
+
+            &:first-of-type>.table__card-item {
+                background: $bgMain;
+            }
+
+            &:not(:nth-of-type(1)):not(:nth-of-type(2)):after {
+                content: '';
+                position: absolute;
+                left: 20px;
+                top: 0;
+                height: 1px;
+                width: 95%;
+                background: $border-gray;
+            }
+
+            &:first-of-type .table__card-button {
+                position: relative;
+            }
+
+            &:not(:first-of-type) .table__card-item-span {
+                display: none;
+            }
+
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &-span {
+                color: $text-secondary;
+                line-height: $text-height-services;
+            }
+
+            &-text {
+                font-size: $text-size-p;
+                font-size: $text-height-p;
+                font-weight: 400;
+
+                @media (min-width: 768px) {
+                    font-size: $text-size-p;
+                    line-height: $text-height-p;
+                    color: $text-primary;
+                    letter-spacing: .2px;
+                }
+            }
+
+            @media (min-width: 768px) {
+                padding: 24px;
+                font-size: $text-size-p;
+                line-height: $text-height-p;
+                color: $text-primary;
+                background: $bgModal;
+            }
+
+        }
+
+        &-button {
+            display: flex;
+            align-self: end;
+            padding: 5px 12px;
+            background: $button;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: .3s ease;
+
+            &-layout {
+                position: absolute;
+                margin: 16px;
+                bottom: 15px;
+                right: 0;
+
+                @media (min-width: 768px) {
+                    position: static;
+                    background: $bgModal;
+                }
+            }
+
+            &-text {
+                background: transparent;
+                color: $text-white;
+                text-transform: uppercase;
+                font-weight: bolder;
+                font-size: $text-size-button;
+                line-height: $text-height-services;
+                font-weight: 700;
+                letter-spacing: .3px;
+                transition: .3s ease;
+            }
+
+            &-icon {
+                background: transparent;
+                margin-left: 8px;
+            }
+
+            &:hover {
+                background: $bgModal;
+                box-shadow: inset 0px 0px 1px 1px $button;
+            }
+
+            &:hover .table__card-button-text {
+                color: $button;
+            }
+
+            @media (min-width: 768px) {
+                position: static;
+            }
+        }
+
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    @media (min-width: 768px) {
+        display: table;
+        width: 100%;
+        padding: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .card-item--display--none {
+        display: none;
+    }
+
+    .section-repair-services-table--display--none {
+        display: block;
+    }
+
+    .section-repair-services--display--none {
+        display: none;
+    }
+
+    .tr {
+        display: table-row;
+    }
+
+    .th {
+        display: table-cell;
+        padding: 24px;
+    }
+
+    .td {
+        display: table-cell;
+    }
+
+}
