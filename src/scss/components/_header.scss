@@ -1,0 +1,124 @@
+.header {
+
+    &__left-side,
+    &__right-side,
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        margin: auto;
+    }
+
+    &__right-side {
+        background: transparent;
+    }
+
+    &-layout {
+        padding: 18px 24px;
+        background: $bgModal;
+    }
+
+    &__item {
+        margin-left: 16px;
+    }
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        &__left-side &__item:nth-child(1) {
+            margin-left: 0;
+        }
+
+        &__right-side &__item:nth-child(4):before {
+            content: '';
+            position: absolute;
+            right: 130px;
+            top: 30px;
+            width: 2px;
+            height: 32px;
+            border-radius: 1px;
+            background: $border-gray;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1119px) {
+
+        &__left-side &__item:nth-child(1):before {
+            content: '';
+            position: absolute;
+            left: 85px;
+            top: 30px;
+            width: 2px;
+            height: 32px;
+            border-radius: 1px;
+            background: $border-gray;
+        }
+
+        &__right-side &__item:nth-child(3):before {
+            content: '';
+            position: absolute;
+            right: 140px;
+            top: 30px;
+            width: 2px;
+            height: 32px;
+            border-radius: 1px;
+            background: $border-gray;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        &__left-side &__item {
+            margin-left: 0px;
+            margin-right: 42px;
+        }
+
+        &__item--display--hidden {
+            display: block;
+        }
+
+        &__right-side &__item:nth-of-type(3) {
+            margin-right: 25px;
+        }
+
+        &-layout {
+            padding: 18px 24px;
+        }
+
+        &__wrapper {
+            margin: auto;
+        }
+    }
+
+    @media (min-width: 1120px) {
+
+        &__right-side &__item:nth-of-type(4),
+        &__right-side &__item:nth-of-type(5) {
+            display: flex;
+            align-items: center;
+        }
+
+        &__left-side,
+        &__item--display--hidden {
+            display: none;
+        }
+
+
+        &__right-side &__item {
+            margin-right: 32px;
+        }
+
+        &__wrapper {
+            justify-content: flex-end;
+            position: absolute;
+            right: 20px;
+            top: 42px;
+        }
+
+        &-layout {
+            background: $bgMain;
+        }
+    }
+
+}

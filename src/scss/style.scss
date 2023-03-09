@@ -1,17 +1,34 @@
-$bgColor: #24292e;
-$text: #fff;
+@import './utils/fonts.scss';
+@import './utils/vars.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+@import './components/sidebar.scss';
+@import './components/button.scss';
+@import './components/modal.scss';
+@import './components/header.scss';
+@import './components/main.scss';
+@import './components/repair.scss';
+@import './components/swiper.scss';
+@import './components/table.scss';
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  background: transparent;
 }
 
 body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  font-family: 'TT Lakes', sans-serif;
+  background-color: $bgMain;
+  color: $text-primary;
+}
+
+.body {
+  @media (min-width: 1120px) {
+    display: flex;
+  }
 }

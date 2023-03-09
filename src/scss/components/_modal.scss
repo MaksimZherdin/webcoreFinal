@@ -1,0 +1,29 @@
+.modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .96);
+    mix-blend-mode: normal;
+    z-index: 1000;
+
+    &-chat,
+    &-call,
+    &-menu {
+        display: none;
+        transition: .2s ease;
+    }
+
+    &-menu {
+        @media (min-width: 1120px) {
+            display: block;
+            position: relative;
+        }
+    }
+
+}
+
+.modal-text {
+    color: $button;
+}
