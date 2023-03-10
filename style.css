@@ -701,7 +701,8 @@
       background: #FF3E79;
       border-radius: 16px;
       transition: .3s ease;
-      margin-right: -5px; }
+      margin-right: -5px;
+      cursor: pointer; }
       .table__card-button-layout {
         position: absolute;
         margin: 16px;
