@@ -892,9 +892,12 @@ body {
   background-color: #F8F8F8;
   color: #1B1C21; }
 
-@media (min-width: 1120px) {
-  .body {
-    display: flex; } }
+.body {
+  max-width: 1440px;
+  margin: 0 auto; }
+  @media (min-width: 1120px) {
+    .body {
+      display: flex; } }
 
 
 /*# sourceMappingURL=style.css.map*/
