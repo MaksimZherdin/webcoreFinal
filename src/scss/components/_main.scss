@@ -1,0 +1,200 @@
+.main {
+
+    border-top: 1px solid $border-main;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: $bgMain;
+
+    &__title--display--hidden,
+    &__item--display--hidden {
+        display: none;
+    }
+
+    &__title {
+        display: flex;
+        margin-top: 16px;
+
+        &-left-side {
+            display: flex;
+        }
+
+        &-right-side {
+            @media (min-width: 1120px) {
+                display: flex;
+            }
+        }
+
+        &-text {
+            letter-spacing: -0.6px;
+            font-size: $text-size-h1;
+            line-height: $text-height-h1;
+            margin-left: 12px;
+            color: $text-primary;
+            font-weight: 800;
+
+            @media (min-width: 1120px) {
+                margin-left: 32px;
+                margin-top: 16px;
+            }
+        }
+
+        &::before {
+            content: ' ';
+            position: relative;
+            width: 4px;
+            height: 40px;
+            border-radius: 2px;
+            background: $blue;
+
+            @media (min-width: 1120px) {
+                margin-top: 16px;
+                border-radius: 2px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            margin-top: 24px;
+        }
+
+        @media (min-width: 1120px) {
+            margin-top: 0px;
+        }
+    }
+
+    &__item {
+        &-text {
+            @media (min-width: 1120px) {
+                font-weight: 500;
+                margin-right: 8px;
+                font-size: $text-size-services;
+                line-height: $text-height-services;
+                letter-spacing: 0.2px;
+                background: transparent;
+            }
+        }
+
+        &-icon {
+            @media (min-width: 1120px) {
+                display: flex;
+            }
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 24px;
+
+        &-image {
+            margin: 0 auto;
+        }
+
+        &-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin: 16px;
+            margin-top: 24px;
+            gap: 20px;
+            overflow-y: hidden;
+            max-height: 90px;
+
+
+            @media (min-width: 768px) {
+
+                & p:first-of-type {
+                    min-height: 80px;
+                }
+
+                padding: 15px;
+                padding-top: 0;
+                margin: 0;
+                margin-right: 35px;
+                max-height: 155px;
+            }
+
+            @media (min-width: 1120px) {
+                padding: 0;
+                margin: 0;
+                max-height: 180px;
+                margin-left: 20px;
+                margin-right: 35px;
+                padding-left: 5px;
+                gap: 15px;
+            }
+        }
+
+        &-button {
+            margin-left: 20px;
+            background: $bgMain;
+
+            @media (min-width: 768px) {
+                margin-left: 10px;
+            }
+
+            @media (min-width: 1120px) {
+                margin-left: 25px;
+                margin-top: 14px;
+            }
+        }
+
+        &-text {
+            @media (min-width: 768px) {
+                margin: 0;
+                margin-right: 1px;
+                margin-left: -5px;
+                padding: 0;
+                line-height: 20px;
+                overflow: hidden;
+            }
+        }
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            margin: 25px;
+            margin-bottom: 0;
+            padding-bottom: 32px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: 1120px) {
+            margin-right: 36px;
+            margin-top: 20px;
+        }
+    }
+
+    &__button-text {
+        font-weight: 400;
+        display: flex;
+
+        &::before {
+            content: url('../img/expand.svg');
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+
+    @media (min-width: 1120px) {
+        border: none;
+    }
+
+}
+
+.text-wrapper-overflow {
+    max-height: 100%;
+}
+
+@media (min-width: 1120px) {
+
+    .main__item--display--hidden {
+        display: block;
+    }
+
+    .description-image {
+        min-width: 360px;
+        border-radius: 10px;
+    }
+}

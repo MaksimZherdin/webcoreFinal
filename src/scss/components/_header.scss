@@ -1,5 +1,9 @@
 .header {
 
+    &__item--display--hidden {
+        display: none;
+    }
+
     &__left-side,
     &__right-side,
     &__wrapper {

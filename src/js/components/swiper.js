@@ -1,35 +1,66 @@
-if (this.window.innerWidth < 767) {
-    const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
-        spaceBetween: 20,
-        slidesPerView: 'auto',
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
+const swiper = new Swiper('.swiper', {
+
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 20,
+    breakpoints: {
+        768: {
+            enabled: false,
+            width: 224,
         },
-        init: true
-    })
-    const swiperTech = new Swiper('.swiper-tech', {
-        direction: 'horizontal',
-        spaceBetween: 20,
-        slidesPerView: 'auto',
-        pagination: {
-            el: '.swiper-pagination-tech',
-            clickable: true
+    },
+    width: 240,
+
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+    },
+
+
+});
+
+const swiperTech = new Swiper('.swiper-tech', {
+
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 20,
+    breakpoints: {
+        768: {
+            enabled: false,
+            width: 224,
         },
-        init: true
-    })
-    const swiperServices = new Swiper('.swiper-services', {
-        direction: 'horizontal',
-        spaceBetween: 20,
-        slidesPerView: 'auto',
-        pagination: {
-            el: '.swiper-pagination-services',
-            clickable: true
+    },
+    width: 240,
+
+    pagination: {
+        el: '.swiper-pagination-tech',
+        type: 'bullets',
+        clickable: true
+    },
+
+
+});
+
+const swiperServices = new Swiper('.swiper-services', {
+
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 50,
+    breakpoints: {
+        768: {
+            enabled: false,
+            width: 224,
         },
-        init: true
-    })
-}
+    },
+    width: 240,
+
+    pagination: {
+        el: '.swiper-pagination-services',
+        type: 'bullets',
+        clickable: true
+    },
+});
 
 const swiperSlide = document.querySelectorAll('.swiper-slide');
 

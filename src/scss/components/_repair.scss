@@ -1,0 +1,149 @@
+.header-repair {
+
+    border-top: 1px solid $border-blue;
+    background: linear-gradient(270deg, $bgMain, $bgModal);
+
+    &__layout {
+        padding: 16px;
+
+        @media (min-width: 768px) {
+            padding: 16px 24px;
+        }
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: $text-size-services;
+        line-height: $text-height-services;
+        letter-spacing: -0.2px;
+        color: $text-secondary;
+        background: transparent;
+    }
+}
+
+.main-repair {
+
+    &__layout {
+        min-width: 0;
+
+        @media (min-width: 768px) {
+            height: 100%;
+        }
+    }
+
+    &__swiper {
+
+        &-brand {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 24px;
+            margin-top: 0;
+            gap: 24px;
+            overflow-x: scroll;
+
+            @media (min-width: 768px) {
+                flex-wrap: wrap;
+                overflow-x: hidden;
+            }
+
+            &::-webkit-scrollbar {
+                @media (min-width: 768px) {
+                    width: 0;
+                }
+            }
+        }
+
+        &-item {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            margin: 16px;
+            padding: 16px;
+            border: 1px solid $border-gray;
+            width: 240px;
+            height: 72px;
+            justify-content: space-between;
+            border-radius: 6px;
+            background: $bgModal;
+
+            &-text {
+
+                align-self: start;
+                font-size: $text-size-services;
+                line-height: $text-height-services;
+                letter-spacing: -0.2px;
+                color: $text-primary;
+                font-weight: 500;
+
+            }
+
+            &-img {
+
+                align-self: flex-end;
+
+            }
+
+            @media (min-width: 768px) {
+                width: 224px;
+                margin: 0;
+            }
+
+            @media (min-width: 1120px) {
+                width: 240px;
+                margin: 0;
+            }
+
+
+        }
+
+        &--overflow--hidden {
+            @media (min-width: 768px) {
+                overflow: hidden;
+                max-height: 160px;
+            }
+        }
+
+        &-brand--overflow--hidden {
+            overflow: hidden;
+            max-height: 160px;
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 24px;
+            gap: 16px 24px;
+        }
+    }
+
+    &__button {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: flex;
+            margin-left: 37px;
+            margin-bottom: 32px;
+        }
+
+        &-text {
+            @media (min-width: 768px) {
+                font-size: $text-size-services;
+                line-height: $text-height-services;
+                color: $text-primary;
+            }
+
+            &::before {
+                @media (min-width: 768px) {
+                    content: url('../img/expand.svg');
+                    position: relative;
+                    top: 6px;
+                    right: 6px;
+                }
+            }
+        }
+    }
+}
+
+.tech-item {
+    height: 160px;
+}

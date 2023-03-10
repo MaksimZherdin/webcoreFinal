@@ -9,7 +9,7 @@
     cursor: pointer;
     transition: .3s ease;
 
-    &:hover .button-modal-text {
+    &:hover .button-modal__text {
         color: $button;
     }
 
@@ -36,11 +36,7 @@
         background: transparent;
         margin-left: 5px;
     }
-}
 
-.button-order-icon {
-    padding: 0px 8px;
-    background: transparent;
 }
 
 .icon-go {
@@ -50,4 +46,8 @@
     &:hover {
         transform: scale(1.1);
     }
+}
+
+.button-icon {
+    cursor: pointer;
 }
