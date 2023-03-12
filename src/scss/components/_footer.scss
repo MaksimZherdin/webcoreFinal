@@ -4,42 +4,45 @@
         grid-template-columns: 1fr 1fr 1fr;
         border-top: 1px solid $border-blue;
 
-        &-text {
-            color: $text-secondary;
-            font-size: $text-size-p;
-            line-height: $text-height-p;
-            margin: 25px;
-
-            &:first-of-type {
-                text-align: left;
-                margin-right: 0;
-            }
-
-            &:nth-of-type(2) {
-                margin: 25px 20px;
-            }
-
-            &:last-of-type {
-                text-align: right;
-            }
-
-            @media (min-width: 320px) and (max-width: 768px) {
-
-                &:nth-of-type(2),
-                &:last-of-type,
-                &:first-of-type {
-                    text-align: center;
-                    margin: 0;
-                }
-
-            }
-        }
-
         @media (min-width: 320px) and (max-width: 768px) {
             grid-template-columns: 1fr;
             gap: 16px;
             padding: 16px 4px;
         }
     }
+}
 
+.footer__wrapper-text {
+    color: $text-secondary;
+    font-size: $text-size-p;
+    line-height: $text-height-p;
+    margin: 25px;
+
+    &:first-of-type {
+        text-align: left;
+        margin-right: 0;
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    &:nth-of-type(2) {
+        margin: 25px 20px;
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    &:last-of-type {
+        text-align: right;
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            text-align: center;
+            margin: 0;
+        }
+    }
 }

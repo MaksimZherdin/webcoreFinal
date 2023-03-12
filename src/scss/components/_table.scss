@@ -1,9 +1,4 @@
-.section-repair-services-table--display--none {
-    display: none;
-}
-
 .table {
-
     flex-direction: row;
     overflow-x: auto;
     display: block;
@@ -30,8 +25,6 @@
         border-radius: 6px;
         background: $bgModal;
 
-
-
         &:first-of-type {
             @media (min-width: 768px) {
                 background: $bgMain;
@@ -50,61 +43,6 @@
             }
         }
 
-
-        &-button {
-
-            display: flex;
-            align-self: end;
-            padding: 5px 12px;
-            background: $button;
-            border-radius: 16px;
-            transition: .3s ease;
-            margin-right: -5px;
-            cursor: pointer;
-
-            &-layout {
-                position: absolute;
-                margin: 16px;
-                bottom: 0px;
-                right: 0;
-
-                @media (min-width: 768px) {
-                    position: static;
-                    background: $bgModal;
-                }
-            }
-
-            &-text {
-                background: transparent;
-                color: $bgModal;
-                text-transform: uppercase;
-                font-weight: bolder;
-                font-size: $text-size-button;
-                line-height: $text-height-services;
-                font-weight: 700;
-                letter-spacing: 0.30px;
-                transition: .3s ease;
-            }
-
-            &:hover .table__card-button-text {
-                color: $button;
-            }
-
-            &-icon {
-                background: transparent;
-                margin-left: 8px;
-            }
-
-            &:hover {
-                background: $bgModal;
-                box-shadow: inset 0px 0px 1px 1px $button;
-            }
-
-            @media (min-width: 768px) {
-                position: static;
-            }
-        }
-
         &:first-of-type .table__card-button {
             @media (min-width: 768px) {
                 position: relative;
@@ -116,41 +54,6 @@
                 display: none;
             }
         }
-
-        &-span {
-            color: $text-secondary;
-            line-height: $text-height-p;
-        }
-
-        &-text {
-            font-size: $text-size-p;
-            line-height: $text-height-p;
-            font-weight: 600;
-        }
-
-        &-item {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            background: transparent;
-
-            @media (min-width: 768px) {
-                padding: 24px;
-                font-size: $text-size-p;
-                line-height: $text-height-p;
-                font-weight: 500;
-                color: $text-primary;
-            }
-
-            &-text {
-                @media (min-width: 768px) {
-                    font-size: $text-size-p;
-                    line-height: $text-height-p;
-                    color: $text-primary;
-                    letter-spacing: 0.2px;
-                }
-            }
-        }
     }
 
     &__footer {
@@ -159,46 +62,6 @@
         padding: 32px;
         padding-bottom: 50px;
         gap: 16px;
-
-        &-text {
-            font-size: $text-size-p;
-            line-height: $text-height-p;
-            letter-spacing: 0.2px;
-            color: $text-primary;
-            font-weight: 500;
-            max-width: 421px;
-        }
-
-        &-button {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-
-            &-text {
-                font-weight: bold;
-                letter-spacing: -0.2px;
-                font-size: $text-size-services;
-                line-height: $text-height-services;
-                color: $text-primary;
-                border-bottom: 1px solid transparent;
-                transition: .25s ease;
-
-                &:hover {
-                    border-bottom: 1px solid $text-primary;
-                    color: $text-secondary;
-                }
-            }
-
-            &-icon {
-                margin-left: 9px;
-            }
-
-            @media (min-width: 320px) and (max-width: 767px) {
-                text-align: left;
-                display: block;
-            }
-
-        }
     }
 
     @media (min-width: 768px) {
@@ -209,8 +72,139 @@
 
 }
 
-@media (min-width: 768px) {
+.table__card-button {
+    display: flex;
+    align-self: end;
+    padding: 5px 12px;
+    background: $button;
+    border-radius: 16px;
+    transition: .3s ease;
+    margin-right: -5px;
+    cursor: pointer;
 
+    @media (min-width: 768px) {
+        position: static;
+        margin-right: 5px;
+    }
+
+    &:hover .table__card-button-text {
+        color: $button;
+    }
+
+    &:hover {
+        background: $bgModal;
+        box-shadow: inset 0px 0px 1px 1px $button;
+    }
+}
+
+.table__card-button-layout {
+    position: absolute;
+    margin: 16px;
+    bottom: 0px;
+    right: 0;
+
+    @media (min-width: 768px) {
+        position: static;
+        background: $bgModal;
+    }
+}
+
+.table__card-button-text {
+    background: transparent;
+    color: $bgModal;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: $text-size-button;
+    line-height: $text-height-services;
+    font-weight: 700;
+    letter-spacing: 0.30px;
+    transition: .3s ease;
+}
+
+.table__card-button-icon {
+    background: transparent;
+    margin-left: 8px;
+}
+
+.table__card-span {
+    color: $text-secondary;
+    line-height: $text-height-p;
+}
+
+.table__card-text {
+    font-size: $text-size-p;
+    line-height: $text-height-p;
+    font-weight: 600;
+}
+
+.table__card-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+
+    @media (min-width: 768px) {
+        padding: 24px;
+        font-size: $text-size-p;
+        line-height: $text-height-p;
+        font-weight: 500;
+        color: $text-primary;
+    }
+}
+
+.table__card-item-text {
+    @media (min-width: 768px) {
+        font-size: $text-size-p;
+        line-height: $text-height-p;
+        color: $text-primary;
+        letter-spacing: 0.2px;
+    }
+}
+
+.table__footer-text {
+    font-size: $text-size-p;
+    line-height: $text-height-p;
+    letter-spacing: 0.2px;
+    color: $text-primary;
+    font-weight: 500;
+    max-width: 421px;
+}
+
+.table__footer-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        text-align: left;
+        display: block;
+    }
+}
+
+.table__footer-button-text {
+    font-weight: bold;
+    letter-spacing: -0.2px;
+    font-size: $text-size-services;
+    line-height: $text-height-services;
+    color: $text-primary;
+    border-bottom: 1px solid transparent;
+    transition: .25s ease;
+
+    &:hover {
+        border-bottom: 1px solid $text-primary;
+        color: $text-secondary;
+    }
+}
+
+.table__footer-button-icon {
+    margin-left: 9px;
+}
+
+.section-repair-services-table--display--none {
+    display: none;
+}
+
+@media (min-width: 768px) {
     .card-item--display--none {
         display: none;
     }
